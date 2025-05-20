@@ -1,47 +1,51 @@
-<!doctype html>
-<html lang="es">
-<head>
-    <meta> charset="utf-8">
-    <title>Quiz endivina la cançó</title> 
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head> #iker hace lo de cambiar de pagina 
+<!DOCTYPE html>
+<html lang="en">
 
-<body class="fotofons">
-<p class="title"> <span style="color:darkmagenta;"> ENDIVINA </span> <span style="color:black"> LA</span> <span style="color:darkmagenta;"> CANÇÓ</span> </p>
-    <div class="contenidor">
-        <div class="content-box">
-            <h1>Pregunta 1</h1>
-            <p id="animationTxt" class="question">📜 "Bebé, yo soy fan de tu caminar..."</p>
-              <form action="index2.html" method="post">
-		<div class="resposta">
-			<label id="caja" class="answer-container">
-				<input type="radio" name="respuesta" value="1">
-				Felices los 4 – Maluma #aquesta es la resposta correcta
-			</label>
-			<label id="caja" class="answer-container">
-				<input type="radio" name="respuesta" value="2">
-				Propuesta Indecente – Romeo Santos
-			</label>
-		</div> 
-        <div class="resposta">
-			<label id="caja" class="answer-container">
-				<input type="radio" name="respuesta" value="3">
-				Hawái – Maluma
-			</label>
-			<label id="caja" class="answer-container">
-				<input type="radio" name="respuesta" value="4">
-				Despacito – Luis Fonsi ft. Daddy Yankee
-			</label>
-		</div> 
-        <div>
-            <input id="my-button" class="next-button" type="submit" value="next"> 
-        </div>
-      </form>
-    </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="titulo">Quiz endevina la cançó</title>
+  <link rel="stylesheet" href="..//css/estilos.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1 id="titulo"><span class="Quiz">Quiz</span><span class="endivina">endivina</span><span class="la">la</span><span class="cançó">cançó</span> <span class="lorem">Estela</span></h1>
+    </header>
+    <main>
+      <div class="question-box">
+          <h2 id="titulo">Pregunta #1</h2>
+          <p class="giro">
+            📜 "Bebé, yo soy fan de tu caminar..."
+          </p>
+        <form action="pregunta2.html">
+          <div class="answers">
+            <div class="answer">
+              <input type="radio" id="option1" name="question">
+              <label for="option1">Felices los 4 – Maluma</label> #AQUESTA ES LA CORRECTA
+            </div>
+            <div class="answer">
+              <input type="radio" id="option1" name="question">
+              <label for="option1">Propuesta Indecente – Romeo Santos</label>
+            </div>
+            <div class="answer">
+              <input type="radio" id="option1" name="question">
+              <label for="option1">Hawái – Maluma</label>
+            </div>
+            <div class="answer">
+              <input type="radio" id="option1" name="question">
+              <label for="option1">Despacito – Luis Fonsi ft. Daddy Yankee</label>
+            </div>
+          </div>
+          <button type="submit" class="next-button shake">Next &gt;&gt;</button>
+        </form>
+      </div>
+    </main>
+    <footer>
+      Designed and developed by DAW1 © 2021-2022 Graphic Resources SL, All rights reserved
+    </footer>
   </div>
 </body>
+
 </html>
-
-
-
-
