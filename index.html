@@ -3,17 +3,30 @@
 <head>
     <meta charset="utf-8">
     <title>Portada</title> 
-    <link rel="stylesheet" type="text/css" href="style.css"> <!--cambiar luego el css-->
+    <link rel="stylesheet" type="text/css" href="style/style.css"> <!--cambiar luego el css-->
 </head>
 <body>
     <div>
-        <form>
+        <form id="elejir" action="">
             <div>
-                <h1>Nombre</h1>
-                <input type="text" placeholder="Please write tu nombre.">
+                <h1>Que quiz quieres jugar?</h1>
+                <button type="button" id="A">Quiz A</button>
+                <button type="button" id="B">Quiz B</button>
             </div>
         </form>
     </div>
 </body>
 </html>
+<script>
+    let formulario = document.getElementById("elejir");
 
+    document.getElementById("A").addEventListener("click", function(){
+        formulario.action = "QUIZ_A/pregunta1.html";
+        formulario.sumbit();
+    })
+    document.getElementById("B").addEventListener("click", function(){
+        formulario.action = "QUIZ_B/pregunta1.html";
+        formulario.sumbit();
+    })
+
+</script>
