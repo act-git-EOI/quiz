@@ -4,48 +4,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title id="titulo">Quiz endevina la cançó</title>
-  <link rel="stylesheet" href="..//css/estilos.css">
+  <title>GUESS THE SONG</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <header>
+    <h1 id="titulo">GENERAL <span class="highlight"> SONGS</span> QUIZ</h1>
+  </header>
   <div class="container">
-    <header>
-      <h1 id="titulo"><span class="Quiz">Quiz</span><span class="endivina">endivina</span><span class="la">la</span><span class="cançó">cançó</span> <span class="lorem">Estela</span></h1>
-    </header>
-    <main>
-      <div class="question-box">
-          <h2 id="titulo">Pregunta #1</h2>
-          <p class="giro">
-            📜 "Bebé, yo soy fan de tu caminar..."
-          </p>
-        <form action="pregunta2.html">
-          <div class="answers">
-            <div class="answer">
-              <input type="radio" id="option1" name="question">
-              <label for="option1">Felices los 4 – Maluma</label> #AQUESTA ES LA CORRECTA
-            </div>
-            <div class="answer">
-              <input type="radio" id="option1" name="question">
-              <label for="option1">Propuesta Indecente – Romeo Santos</label>
-            </div>
-            <div class="answer">
-              <input type="radio" id="option1" name="question">
-              <label for="option1">Hawái – Maluma</label>
-            </div>
-            <div class="answer">
-              <input type="radio" id="option1" name="question">
-              <label for="option1">Despacito – Luis Fonsi ft. Daddy Yankee</label>
-            </div>
+    <div class="question-box">
+      <h2>Question 1</h2>
+      <p>📜 "Bebé, yo soy fan de tu caminar..."</p>
+      <form action="pregunta2.html">
+        <div class="answers">
+          <div class="answer">
+            <input type="radio" name="answer" id="felices" value="Felices los 4 – Maluma">
+            <label for="felices">Felices los 4 – Maluma</label>
           </div>
-          <button type="submit" class="next-button shake">Next &gt;&gt;</button>
-        </form>
-      </div>
-    </main>
-    <footer>
-      Designed and developed by DAW1 © 2021-2022 Graphic Resources SL, All rights reserved
-    </footer>
+          <div class="answer">
+            <input type="radio" name="answer" id="propuesta" value="Propuesta Indecente – Romeo Santos">
+            <label for="propuesta">Propuesta Indecente – Romeo Santos</label>
+          </div>
+          <div class="answer">
+            <input type="radio" name="answer" id="hawai" value="Hawái – Maluma">
+            <label for="hawai">Hawái – Maluma</label>
+          </div>
+          <div class="answer">
+            <input type="radio" name="answer" id="despacito" value="Despacito – Luis Fonsi ft. Daddy Yankee">
+            <label for="despacito">Despacito – Luis Fonsi ft. Daddy Yankee</label>
+          </div>
+        </div>
+        <button class="next-button">Next</button>
+    </div>
   </div>
+  <footer>
+    <p>Designed and developed by DAW1 © 2023-2025 Graphic Resources SL, All rights reserved</p>
+  </footer>
 </body>
 
 </html>
