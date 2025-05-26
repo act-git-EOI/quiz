@@ -1,154 +1,214 @@
 @charset "utf-8";
+
 @font-face {
     font-family: pregunta;
     src: url(../fonts/OdinRounded.otf);
 }
+
 @font-face {
     font-family: titulo;
     src: url(../fonts/Arcade.ttf);
 }
-body {
+
+* {
     margin: 0;
-    font-family: pregunta;
-    font-size: 18px;
-    background-color: #333;
-    color: #fff;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: pregunta, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+    color: #e0e0e0;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+    justify-content: space-between;
 }
-#titulo{
-    font-family: titulo;
-}
-#fuente{
-    font-family: pregunta;
-}
+
 .container {
-    width: 80%;
+    width: 90%;
     max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
 }
-header h1 {
-    font-size: 65px;
-    margin: 20px 0;
+
+header {
+    width: 100%;
+    padding: 20px 0;
     text-align: center;
-}
-.div h2{
-    align-items: start;
-}
-header .it {
-    color: #f00;
-    text-shadow: 0px 0px 4px rgba(255, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-header .training {
-    color: #ff0;
-    text-shadow: 0px 0px 4px rgba(255, 255, 0, 0.8);
+header h1 {
+    font-family: titulo;
+    font-size: 48px;
+    color: #e0e0e0;
+    text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
 }
 
-header .lorem {
-    color: #0f0;
-    text-shadow: 0px 0px 4px rgba(0, 255, 0, 0.8);
+header h1 .highlight {
+    color: #ff4081;
+    text-shadow: 0 0 10px #ff4081;
 }
 
 .question-box {
-    background-color: #2173dc;
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    background: #222;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.giro{
-    transition: background-color 1s ease 0s, transform 1s ease 0s;
-}
-.giro:hover{
-    transform: rotateX(-360deg) scale(1.2,1.2);
+
+.question-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(255, 64, 129, 0.2);
 }
 
 .question-box h2 {
     font-family: 'Courier New', monospace;
-    color: #b0d0ff;
+    color: #ff4081;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
-.question-box p:hover {
-    margin: 20px 0;
+.question-box p {
+    font-size: 20px;
+    color: #e0e0e0;
+    margin-bottom: 20px;
     line-height: 1.5;
+    text-align: center;
 }
 
 .answers {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    justify-items: center;
 }
 
 .answer {
     display: flex;
     align-items: center;
     gap: 10px;
-    border: #2173dc solid 1px;
-    background: #fff;
-    padding: 10px 15px;
+    background: #333;
+    padding: 15px 20px;
     border-radius: 10px;
-    color: #000;
-    transition-duration: 1s;
-    transition: background-color 1s ease 0s, transform 1s ease 0s;
+    width: 100%;
+    max-width: 350px;
+    color: #e0e0e0;
+    border: 2px solid transparent;
+    transition: background 0.3s ease, border 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
 }
-.answer:hover{
-    border: green solid 3.5px;
-    border-color: #38b000;
-    transform: scale(1.2,1.2);
+
+.answer:hover {
+    background: #444;
+    border: 2px solid #ff4081;
+    transform: scale(1.05);
 }
-.answer select {
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 5px 10px;
+
+.answer input[type="radio"] {
+    accent-color: #ff4081;
+    width: 18px;
+    height: 18px;
+}
+
+.answer label {
+    font-size: 18px;
+    cursor: pointer;
 }
 
 .next-button {
-    align-items: end;
-    margin-left: 650px;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #38b000;
+    display: block;
+    margin: 20px auto 0;
+    padding: 12px 30px;
+    background: #ff4081;
     color: #fff;
-    border: #8bbbfa solid 1px;
-    border-radius: 7px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
     cursor: pointer;
-    font-size: 1rem;
-    transition: 0,65s;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .next-button:hover {
-    border: white solid 2px;
-    background-color: #78de3c;
-    animation-name: shake;
-    animation-duration: 0.25s;
-    animation-iteration-count: 1s;
-}
-
-@keyframes shake {
-    0% {
-        transform: translate(5px);
-    }
-    25%{
-        transform: translate(-5px);
-    }
-    50%{
-        transform: translate(5px);
-    }
-    75%{
-        transform: translate(-5px);
-    }
-    100%{
-        transform: translate(5px);
-    }
+    background: #e03570;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 64, 129, 0.5);
 }
 
 footer {
-    margin-top: 20px;
-    font-size: 0.8rem;
-    color: #aaa;
+    width: 100%;
+    padding: 20px;
     text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    color: #888;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 36px;
+    }
+
+    .question-box h2 {
+        font-size: 20px;
+    }
+
+    .question-box p {
+        font-size: 18px;
+    }
+
+    .answers {
+        grid-template-columns: 1fr;
+    }
+
+    .answer {
+        max-width: 100%;
+    }
+
+    .next-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+.answers {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.answer input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    background: #333;
+    color: #e0e0e0;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: border 0.3s ease, background 0.3s ease;
+}
+
+.answer input[type="text"]:focus {
+    border: 2px solid #ff4081;
+    background: #444;
+    outline: none;
 }

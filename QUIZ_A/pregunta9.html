@@ -4,48 +4,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title id="titulo">General questions quiz</title>
-  <link rel="stylesheet" href="..//QUIZ_A/quiz2.css">
+  <title>GENERAL QUESTIONS QUIZ</title>
+  <link rel="stylesheet" href="../QUIZ_A/quiz2.css">
 </head>
 
 <body>
+  <header>
+    <h1 id="titulo">GENERAL <span class="highlight">QUESTIONS</span> QUIZ</h1>
+  </header>
   <div class="container">
-    <header>
-      <h1 id="titulo"><span class="it">GENERAL</span><span class="training">QUESTIONS</span> <span class="lorem">QUIZ</span></h1>
-    </header>
-    <main>
-      <div class="question-box">
-          <h2 id="titulo">Question 5</h2>
-          <p class="giro">
-            5. Which ocean is the largest?                             <!--RESPUESTA: PACIFIC OCEAN -->
-          </p>
-        <form action="pregunta10.html">
-          <div class="answers">
-            <div class="answer">
-              <input type="radio" id="option1" name="question">
-              <label for="option1">Arctic ocean</label>
-            </div>
-            <div class="answer">
-              <input type="radio" id="option1" name="question">
-              <label for="option1">Indian ocean</label>
-            </div>
-            <div class="answer">
-              <input type="radio" id="option1" name="question">
-              <label for="option1">Mediterranean sea</label>
-            </div>
-            <div class="answer">
-              <input type="radio" id="option1" name="question">
-              <label for="option1">Pacific ocean</label>
-            </div>
+    <div class="question-box">
+      <h2>Question 9</h2>
+      <p>What is the capital city of Australia?</p> <!--RESPUESTA: CANBERRA -->
+      <form action="pregunta10.html">
+        <div class="answers">
+          <div class="answer">
+            <input type="radio" name="answer" id="sydney" value="Sydney">
+            <label for="sydney">Sydney</label>
           </div>
-          <button type="submit" class="next-button shake">Next question &gt;&gt;</button>
-        </form>
-      </div>
-    </main>
-    <footer>
-      Designed and developed by DAW1 © 2021-2022 Graphic Resources SL, All rights reserved
-    </footer>
+          <div class="answer">
+            <input type="radio" name="answer" id="manila" value="Manila">
+            <label for="manila">Manila</label>
+          </div>
+          <div class="answer">
+            <input type="radio" name="answer" id="antananarivo" value="Antananarivo">
+            <label for="antananarivo">Antananarivo</label>
+          </div>
+          <div class="answer">
+            <input type="radio" name="answer" id="canberra" value="Canberra">
+            <label for="canberra">Canberra</label>
+          </div>
+        </div>
+        <button class="next-button">Next Question</button>
+    </div>
   </div>
+  <footer>
+    <p>Designed and developed by DAW1 © 2023-2025 Graphic Resources SL, All rights reserved</p>
+  </footer>
 </body>
 
 </html>
