@@ -7,26 +7,9 @@
 </head>
 <body>
     <div>
-        <form id="elejir" action="">
-            <div>
-                <h1>Que quiz quieres jugar?</h1>
-                <button type="button" id="A">Quiz A</button>
-                <button type="button" id="B">Quiz B</button>
-            </div>
-        </form>
+        <h1>¿Qué quiz quieres jugar?</h1>
+        <a href="QUIZ_A/pregunta1.html"><button>Quiz A</button></a>
+        <a href="QUIZ_B/pregunta1.html"><button>Quiz B</button></a>
     </div>
 </body>
 </html>
-<script>
-    let formulario = document.getElementById("elejir");
-
-    document.getElementById("A").addEventListener("click", function(){
-        formulario.action = "QUIZ_A/pregunta1.html";
-        formulario.sumbit();
-    })
-    document.getElementById("B").addEventListener("click", function(){
-        formulario.action = "QUIZ_B/pregunta1.html";
-        formulario.sumbit();
-    })
-
-</script>
