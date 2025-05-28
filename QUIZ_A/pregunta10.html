@@ -16,7 +16,7 @@
     <div class="question-box">
       <h2>Question 10</h2>
       <p>Which famous physicist developed the theory of general relativity?</p> <!--RESPUESTA: ALBERT EINSTEIN -->
-      <form action="pregunta11.html">                                           <!--Va a la pagina de los resultados!-->
+      <form action="resultat.html">                                           <!--Va a la pagina de los resultados!-->
         <div class="answers">
           <div class="answer">
             <input type="radio" name="answer" id="copernico" value="Nicolas Copernico">
@@ -38,6 +38,20 @@
         <button class="next-button">Next Question</button>
     </div>
   </div>
+  <script src="../puntuacion.js"></script>
+    <script>
+        const questionIndex = 9; // Pregunta 1
+        document.getElementById('quizForm').addEventListener('change', function() {
+            validateAnswer(questionIndex);
+        });
+        document.getElementById('quizForm').addEventListener('submit', function(event) {
+            const selectedValue = document.querySelector('input[name="answer"]:checked');
+            if (!selectedValue) {
+                event.preventDefault();
+                alert('Please select an answer.');
+            }
+        });
+    </script>
   <footer>
     <p>Designed and developed by DAW1 © 2023-2025 Graphic Resources SL, All rights reserved</p>
   </footer>

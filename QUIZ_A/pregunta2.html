@@ -38,6 +38,20 @@
         <button class="next-button">Next Question</button>
     </div>
   </div>
+  <script src="../puntuacion.js"></script>
+    <script>
+        const questionIndex = 1; // Pregunta 1
+        document.getElementById('quizForm').addEventListener('change', function() {
+            validateAnswer(questionIndex);
+        });
+        document.getElementById('quizForm').addEventListener('submit', function(event) {
+            const selectedValue = document.querySelector('input[name="answer"]:checked');
+            if (!selectedValue) {
+                event.preventDefault();
+                alert('Please select an answer.');
+            }
+        });
+    </script>
   <footer>
     <p>Designed and developed by DAW1 © 2023-2025 Graphic Resources SL, All rights reserved</p>
   </footer>

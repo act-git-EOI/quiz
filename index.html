@@ -1,15 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <title>Portada</title> 
-    <link rel="stylesheet" type="text/css" href="style/style.css"> <!--cambiar luego el css-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Selection</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div>
         <h1>¿Qué quiz quieres jugar?</h1>
-        <a href="QUIZ_A/pregunta1.html"><button>Quiz A</button></a>
-        <a href="QUIZ_B/pregunta1.html"><button>Quiz B</button></a>
+        <button onclick="quizEscojido('A')">Quiz A</button>
+        <button onclick="quizEscojido('B')">Quiz B</button>
     </div>
+    <script src="puntuacion.js"></script>
 </body>
 </html>
