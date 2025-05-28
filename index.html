@@ -7,26 +7,22 @@
 </head>
 <body>
     <div>
-        <form id="elejir" action="">
-            <div>
-                <h1>Que quiz quieres jugar?</h1>
-                <button type="button" id="A">Quiz A</button>
-                <button type="button" id="B">Quiz B</button>
-            </div>
-        </form>
+        <h1>¿Qué quiz quieres jugar?</h1>
+        <button onclick="startQuiz('A')">Quiz A</button>
+        <button onclick="startQuiz('B')">Quiz B</button>
     </div>
+
+    <script>
+        function startQuiz(quiz) {
+            if (quiz === 'A') {
+                console.log('Navigating to QUIZ_A/pregunta1.html');
+                window.location.href = 'QUIZ_A/pregunta1.html';
+            } else if (quiz === 'B') {
+                console.log('Navigating to QUIZ_A/pregunta1.html');
+                window.location.href = 'QUIZ_B/pregunta1.html';
+            }
+        }
+    </script>
 </body>
 </html>
-<script>
-    let formulario = document.getElementById("elejir");
 
-    document.getElementById("A").addEventListener("click", function(){
-        formulario.action = "QUIZ_A/pregunta1.html";
-        formulario.sumbit();
-    })
-    document.getElementById("B").addEventListener("click", function(){
-        formulario.action = "QUIZ_B/pregunta1.html";
-        formulario.sumbit();
-    })
-
-</script>
