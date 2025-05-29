@@ -1,46 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GENERAL QUESTIONS QUIZ</title>
-  <link rel="stylesheet" href="../QUIZ_A/quiz2.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz A - Pregunta 6</title>
+    <link rel="stylesheet" href="/QUIZ_A/quiz2.css">
 </head>
-
 <body>
-  <header>
-    <h1 id="titulo">GENERAL <span class="highlight">QUESTIONS</span> QUIZ</h1>
-  </header>
-  <div class="container">
-    <div class="question-box">
-      <h2>Question 6</h2>
-      <p>What is the smallest country in the world by land area?</p> <!--RESPUESTA: VATICAN CITY -->
-      <form action="pregunta7.html">
-        <div class="answers">
-          <div class="answer">
-            <input type="radio" name="answer" id="monaco" value="Monaco">
-            <label for="monaco">Monaco</label>
-          </div>
-          <div class="answer">
-            <input type="radio" name="answer" id="srilanka" value="Sri Lanka">
-            <label for="srilanka">Sri Lanka</label>
-          </div>
-          <div class="answer">
-            <input type="radio" name="answer" id="vatican" value="Vatican">
-            <label for="vatican">Vatican</label>
-          </div>
-          <div class="answer">
-            <input type="radio" name="answer" id="vaticancity" value="Vatican City">
-            <label for="vaticancity">Vatican City</label>
-          </div>
+    <header>
+        <h1>GENERAL QUESTIONS <span class="highlight">QUIZ</span></h1>
+    </header>
+    <div class="container">
+        <div class="question-box">
+            <h2>Question 6</h2>
+            <p>What is the smallest country in the world by land area?</p>
+            <form id="quizForm" action="pregunta7.html" method="GET">
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" name="answer" id="monaco" value="Monaco">
+                        <label for="monaco">Monaco</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" name="answer" id="sri-lanka" value="Sri Lanka">
+                        <label for="sri-lanka">Sri Lanka</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" name="answer" id="vatican" value="Vatican">
+                        <label for="vatican">Vatican</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" name="answer" id="vatican-city" value="VATICAN CITY">
+                        <label for="vatican-city">Vatican City</label>
+                    </div>
+                </div>
+                <button type="submit" class="next-button" id="nextButton" style="display: none;">Next Question</button>
+            </form>
         </div>
-        <button class="next-button">Next Question</button>
     </div>
-  </div>
-  <script src="../puntuacion.js"></script>
+    <footer>
+        <p>Designed and developed by DAW1 © 2023-2025 Graphic Resources SL, All rights reserved</p>
+    </footer>
+    <script src="../puntuacion.js"></script>
     <script>
-        const questionIndex = 5; // Pregunta 1
+        const questionIndex = 5; // Pregunta 6
         document.getElementById('quizForm').addEventListener('change', function() {
             validateAnswer(questionIndex);
         });
@@ -52,9 +54,5 @@
             }
         });
     </script>
-  <footer>
-    <p>Designed and developed by DAW1 © 2023-2025 Graphic Resources SL, All rights reserved</p>
-  </footer>
 </body>
-
 </html>

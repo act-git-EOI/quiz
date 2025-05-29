@@ -1,46 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> GUESS THE CAPITAL</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz B - Pregunta 7</title>
+    <link rel="stylesheet" href="/QUIZ_B/style.css">
 </head>
-
 <body>
-  <header>
-    <h1 id="titulo">GENERAL <span class="highlight">CAPITALS </span> QUIZ</h1>
-  </header>
-  <div class="container">
-    <div class="question-box">
-      <h2>Question 7</h2>
-      <p>What is the capital of India?</p>
-      <form action="pregunta8.html">
-        <div class="answers">
-          <div class="answer">
-            <input type="radio" name="answer" id="mumbai" value="Mumbai">
-            <label for="mumbai">Mumbai</label>
-          </div>
-          <div class="answer">
-            <input type="radio" name="answer" id="bangalore" value="Bangalore">
-            <label for="bangalore">Bangalore</label>
-          </div>
-          <div class="answer">
-            <input type="radio" name="answer" id="delhi" value="New Delhi">
-            <label for="delhi">New Delhi</label>  <!--resposta correcte-->
-          </div>
-          <div class="answer">
-            <input type="radio" name="answer" id="kolkata" value="Kolkata">
-            <label for="kolkata">Kolkata</label>
-          </div>
+    <header>
+        <h1>GENERAL CAPITALS <span class="highlight">QUIZ</span></h1>
+    </header>
+    <div class="container">
+        <div class="question-box">
+            <h2>Question 7</h2>
+            <p>What is the capital of India?</p>
+            <form id="quizForm" action="pregunta8.html" method="GET">
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" name="answer" id="mumbai" value="Mumbai">
+                        <label for="mumbai">Mumbai</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" name="answer" id="bangalore" value="Bangalore">
+                        <label for="bangalore">Bangalore</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" name="answer" id="new-delhi" value="New Delhi">
+                        <label for="new-delhi">New Delhi</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" name="answer" id="kolkata" value="Kolkata">
+                        <label for="kolkata">Kolkata</label>
+                    </div>
+                </div>
+                <button type="submit" class="next-button" id="nextButton" style="display: none;">Next Question</button>
+            </form>
         </div>
-        <button class="next-button">Next Question</button>
     </div>
-  </div>
-  <footer>
-    <p>Designed and developed by DAW1 © 2023-2025 Graphic Resources SL, All rights reserved</p>
-  </footer>
+    <footer>
+        <p>Designed and developed by DAW1 © 2023-2025 Graphic Resources SL, All rights reserved</p>
+    </footer>
+    <script src="/puntuacion.js"></script>
+    <script>
+        const questionIndex = 6; // Pregunta 7
+        document.getElementById('quizForm').addEventListener('change', function() {
+            validateAnswer(questionIndex);
+        });
+        document.getElementById('quizForm').addEventListener('submit', function(event) {
+            const selectedValue = document.querySelector('input[name="answer"]:checked');
+            if (!selectedValue) {
+                event.preventDefault();
+                alert('Please select an answer.');
+            }
+        });
+    </script>
 </body>
-
 </html>

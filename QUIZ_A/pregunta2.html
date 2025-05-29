@@ -1,46 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GENERAL QUESTIONS QUIZ</title>
-  <link rel="stylesheet" href="../QUIZ_A/quiz2.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz A - Pregunta 2</title>
+    <link rel="stylesheet" href="/QUIZ_A/quiz2.css">
 </head>
-
 <body>
-  <header>
-    <h1 id="titulo">GENERAL <span class="highlight">QUESTIONS</span> QUIZ</h1>
-  </header>
-  <div class="container">
-    <div class="question-box">
-      <h2>Question 2</h2>
-      <p>Who painted the Mona Lisa?</p> <!--RESPUESTA: LEONARDO DA VINCI -->
-      <form action="pregunta3.html">
-        <div class="answers">
-          <div class="answer">
-            <input type="radio" name="answer" id="caprio" value="Leonardo di Caprio">
-            <label for="caprio">Leonardo di Caprio</label>
-          </div>
-          <div class="answer">
-            <input type="radio" name="answer" id="vinci" value="Leonardo Da Vinci">
-            <label for="vinci">Leonardo Da Vinci</label>
-          </div>
-          <div class="answer">
-            <input type="radio" name="answer" id="picasso" value="Picasso">
-            <label for="picasso">Picasso</label>
-          </div>
-          <div class="answer">
-            <input type="radio" name="answer" id="kahlo" value="Frida Kahlo">
-            <label for="kahlo">Frida Kahlo</label>
-          </div>
+    <header>
+        <h1>GENERAL QUESTIONS <span class="highlight">QUIZ</span></h1>
+    </header>
+    <div class="container">
+        <div class="question-box">
+            <h2>Question 2</h2>
+            <p>Who painted the Mona Lisa?</p>
+            <form id="quizForm" action="pregunta3.html" method="GET">
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" name="answer" id="leonardo-di-caprio" value="Leonardo di Caprio">
+                        <label for="leonardo-di-caprio">Leonardo di Caprio</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" name="answer" id="leonardo-da-vinci" value="LEONARDO DA VINCI">
+                        <label for="leonardo-da-vinci">Leonardo Da Vinci</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" name="answer" id="picasso" value="Picasso">
+                        <label for="picasso">Picasso</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" name="answer" id="frida-kahlo" value="Frida Kahlo">
+                        <label for="frida-kahlo">Frida Kahlo</label>
+                    </div>
+                </div>
+                <button type="submit" class="next-button" id="nextButton" style="display: none;">Next Question</button>
+            </form>
         </div>
-        <button class="next-button">Next Question</button>
     </div>
-  </div>
-  <script src="../puntuacion.js"></script>
+    <footer>
+        <p>Designed and developed by DAW1 © 2023-2025 Graphic Resources SL, All rights reserved</p>
+    </footer>
+    <script src="../puntuacion.js"></script>
     <script>
-        const questionIndex = 1; // Pregunta 1
+        const questionIndex = 1; // Pregunta 2
         document.getElementById('quizForm').addEventListener('change', function() {
             validateAnswer(questionIndex);
         });
@@ -52,9 +54,5 @@
             }
         });
     </script>
-  <footer>
-    <p>Designed and developed by DAW1 © 2023-2025 Graphic Resources SL, All rights reserved</p>
-  </footer>
 </body>
-
 </html>

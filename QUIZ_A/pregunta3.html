@@ -1,22 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GENERAL QUESTIONS QUIZ</title>
-    <link rel="stylesheet" href="../QUIZ_A/quiz2.css">
+    <title>Quiz A - Pregunta 3</title>
+    <link rel="stylesheet" href="/QUIZ_A/quiz2.css">
 </head>
-
 <body>
     <header>
-        <h1 id="titulo">GENERAL <span class="highlight">QUESTIONS</span> QUIZ</h1>
+        <h1>GENERAL QUESTIONS <span class="highlight">QUIZ</span></h1>
     </header>
     <div class="container">
         <div class="question-box">
             <h2>Question 3</h2>
-            <p>What is the main language spoken in Brazil?</p> <!--RESPUESTA: PORTUGUESE -->
-            <form action="pregunta4.html">
+            <p>What is the main language spoken in Brazil?</p>
+            <form id="quizForm" action="pregunta4.html" method="GET">
                 <div class="answers">
                     <div class="answer">
                         <input type="radio" name="answer" id="spanish" value="Spanish">
@@ -27,7 +25,7 @@
                         <label for="english">English</label>
                     </div>
                     <div class="answer">
-                        <input type="radio" name="answer" id="portuguese" value="Portuguese">
+                        <input type="radio" name="answer" id="portuguese" value="PORTUGUESE">
                         <label for="portuguese">Portuguese</label>
                     </div>
                     <div class="answer">
@@ -35,12 +33,16 @@
                         <label for="colombian">Colombian</label>
                     </div>
                 </div>
-                <button class="next-button">Next Question</button>
+                <button type="submit" class="next-button" id="nextButton" style="display: none;">Next Question</button>
+            </form>
         </div>
     </div>
+    <footer>
+        <p>Designed and developed by DAW1 © 2023-2025 Graphic Resources SL, All rights reserved</p>
+    </footer>
     <script src="../puntuacion.js"></script>
     <script>
-        const questionIndex = 2; // Pregunta 1
+        const questionIndex = 2; // Pregunta 3
         document.getElementById('quizForm').addEventListener('change', function() {
             validateAnswer(questionIndex);
         });
@@ -52,9 +54,5 @@
             }
         });
     </script>
-    <footer>
-        <p>Designed and developed by DAW1 © 2023-2025 Graphic Resources SL, All rights reserved</p>
-    </footer>
 </body>
-
 </html>

@@ -1,46 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GUESS THE CAPITAL</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz B - Pregunta 2</title>
+    <link rel="stylesheet" href="/QUIZ_B/style.css">
 </head>
-
 <body>
-  <header>
-    <h1 id="titulo"> GENERAL <span class="highlight"> CAPITALS </span> QUIZ</h1>
-  </header>
-  <div class="container">
-    <div class="question-box">
-      <h2>Question 2</h2>
-      <p>What is the capital of Brazil?</p>
-      <form action="pregunta3.html">
-        <div class="answers">
-          <div class="answer">
-            <input type="radio" name="answer" id="manaus" value="Manaus">
-            <label for="manaus">Manaus</label>
-          </div>
-          <div class="answer">
-            <input type="radio" name="answer" id="salvador" value="Salvador">
-            <label for="salvador">Salvador</label>
-          </div>
-          <div class="answer">
-            <input type="radio" name="answer" id="brasília" value="Brasília">
-            <label for="brasília">Brasília</label>  <!--resposta correcte-->
-          </div>
-          <div class="answer">
-            <input type="radio" name="answer" id="paulo" value="Sao Paulo">
-            <label for="paulo">Sao Paulo</label>
-          </div>
+    <header>
+        <h1>GENERAL CAPITALS <span class="highlight">QUIZ</span></h1>
+    </header>
+    <div class="container">
+        <div class="question-box">
+            <h2>Question 2</h2>
+            <p>What is the capital of Brazil?</p>
+            <form id="quizForm" action="pregunta3.html" method="GET">
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" name="answer" id="manaus" value="Manaus">
+                        <label for="manaus">Manaus</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" name="answer" id="salvador" value="Salvador">
+                        <label for="salvador">Salvador</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" name="answer" id="brasilia" value="Brasília">
+                        <label for="brasilia">Brasília</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" name="answer" id="sao-paulo" value="Sao Paulo">
+                        <label for="sao-paulo">Sao Paulo</label>
+                    </div>
+                </div>
+                <button type="submit" class="next-button" id="nextButton" style="display: none;">Next Question</button>
+            </form>
         </div>
-        <button class="next-button">Next</button>
     </div>
-  </div>
-  <footer>
-    <p>Designed and developed by DAW1 © 2023-2025 Graphic Resources SL, All rights reserved</p>
-  </footer>
+    <footer>
+        <p>Designed and developed by DAW1 © 2023-2025 Graphic Resources SL, All rights reserved</p>
+    </footer>
+    <script src="/puntuacion.js"></script>
+    <script>
+        const questionIndex = 1; // Pregunta 2
+        document.getElementById('quizForm').addEventListener('change', function() {
+            validateAnswer(questionIndex);
+        });
+        document.getElementById('quizForm').addEventListener('submit', function(event) {
+            const selectedValue = document.querySelector('input[name="answer"]:checked');
+            if (!selectedValue) {
+                event.preventDefault();
+                alert('Please select an answer.');
+            }
+        });
+    </script>
 </body>
-
 </html>

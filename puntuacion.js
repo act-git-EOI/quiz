@@ -39,7 +39,6 @@ function quizEscojido(q) {
     }
 }
 
-// Function to validate and store user answer
 function validateAnswer(questionIndex) {
     const selectedQuiz = sessionStorage.getItem('selectedQuiz');
     const correctAnswers = selectedQuiz === 'A' ? respuestasA : respuestasB;
@@ -57,7 +56,6 @@ function validateAnswer(questionIndex) {
             }
         });
 
-        // Store user answer in sessionStorage
         const userAnswers = JSON.parse(sessionStorage.getItem('userAnswers') || '[]');
         userAnswers[questionIndex] = selectedValue;
         sessionStorage.setItem('userAnswers', JSON.stringify(userAnswers));
@@ -66,7 +64,6 @@ function validateAnswer(questionIndex) {
     }
 }
 
-// Function to calculate and display results (used in results.html)
 function displayResults() {
     const selectedQuiz = sessionStorage.getItem('selectedQuiz');
     const userAnswers = JSON.parse(sessionStorage.getItem('userAnswers') || '[]');
@@ -99,6 +96,4 @@ function displayResults() {
     totalItem.innerHTML = `<strong>Total:</strong> ${correctCount} correctas, ${incorrectCount} incorrectas (de 10)`;
     resultContainer.appendChild(totalItem);
 
-    // Clear sessionStorage after displaying results (optional)
-    // sessionStorage.clear();
 }
